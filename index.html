@@ -1,149 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JMS-Team</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
 
-        .profile-header {
-            background: linear-gradient(to right, #007bff, #6c757d);
-            color: white;
-            padding: 80px 20px 50px; /* Added more top padding for better spacing */
-            text-align: center;
-        }
+      .profile-header {
+        background: linear-gradient(to right, #007bff, #6c757d);
+        color: white;
+        padding: 80px 20px 50px; /* Added more top padding for better spacing */
+        text-align: center;
+      }
 
-        .profile-header img {
-          background:white;
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-top: -75px;
-            border: 5px solid white;
-            padding:5px;
-        }
+      .profile-header img {
+        background: white;
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: -75px;
+        border: 5px solid white;
+        padding: 5px;
+      }
 
-        .profile-header h1 {
-            margin-top: 10px;
-            font-size: 2.5rem;
-        }
+      .profile-header h1 {
+        margin-top: 10px;
+        font-size: 2.5rem;
+      }
 
-        .profile-header p {
-            font-size: 1.2rem;
-        }
+      .profile-header p {
+        font-size: 1.2rem;
+      }
 
-        .projects-section {
-            background-color: #f8f9fa;
-            padding: 40px 20px;
-            flex: 1; /* Ensures this section grows to take available space */
-        }
+      .projects-section {
+        background-color: #f8f9fa;
+        padding: 40px 20px;
+        flex: 1; /* Ensures this section grows to take available space */
+      }
 
-        .project-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+      .project-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
 
-        .project-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
+      .project-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
 
-        .footer {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            position: relative;
-        }
+      .footer {
+        background-color: #343a40;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+      }
 
-        .footer a {
-            color: #007bff;
-            text-decoration: none;
-        }
+      .footer a {
+        color: #007bff;
+        text-decoration: none;
+      }
 
-        .footer a:hover {
-            text-decoration: underline;
-        }
+      .footer a:hover {
+        text-decoration: underline;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Profile Header -->
     <header class="profile-header">
-        <img src="https://cdn.glitch.global/62112491-90a8-4bc2-8623-6c0ba095d5bd/Punjab-Police-Logo.png?v=1734947112795" alt="Profile Picture">
-        <h1>Jaspal Singh</h1>
-        <p>ITA(Software) | Bureau of investigation | Punjab Police</p>
-        <div class="mt-3 d-none">
-            <a href="mailto:john.doe@example.com" class="btn btn-light btn-sm mx-1"><i class="bi bi-envelope"></i> Email</a>
-            <a href="https://linkedin.com/in/johndoe" target="_blank" class="btn btn-light btn-sm mx-1"><i class="bi bi-linkedin"></i> LinkedIn</a>
-            <a href="https://github.com/johndoe" target="_blank" class="btn btn-light btn-sm mx-1"><i class="bi bi-github"></i> GitHub</a>
-        </div>
+      <img
+        src="https://cdn.glitch.global/62112491-90a8-4bc2-8623-6c0ba095d5bd/Punjab-Police-Logo.png?v=1734947112795"
+        alt="Profile Picture"
+      />
+      <h1>Jaspal Singh</h1>
+      <p>ITA(Software) | Bureau of investigation | Punjab Police</p>
+      <div class="mt-3 d-none">
+        <a href="mailto:john.doe@example.com" class="btn btn-light btn-sm mx-1"
+          ><i class="bi bi-envelope"></i> Email</a
+        >
+        <a
+          href="https://linkedin.com/in/johndoe"
+          target="_blank"
+          class="btn btn-light btn-sm mx-1"
+          ><i class="bi bi-linkedin"></i> LinkedIn</a
+        >
+        <a
+          href="https://github.com/johndoe"
+          target="_blank"
+          class="btn btn-light btn-sm mx-1"
+          ><i class="bi bi-github"></i> GitHub</a
+        >
+      </div>
     </header>
 
     <!-- Projects Section -->
     <section class="projects-section">
-        <div class="container">
-            <h2 class="text-center mb-4">My Projects</h2>
-            <div class="row">
-              <!-- Project 1 -->
-                <div class="col-md-3 mb-4">
-                    <div class="card project-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Task Trail</h5>
-                            <p class="card-text">Your go-to for managing and conquering daily tasks effortlessly.</p>
-                            <a href="https://task-trail.glitch.me/" target="_blank" class="btn btn-primary">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="col-md-3 mb-4">
-                    <div class="card project-card">
-                        <div class="card-body">
-                            <h5 class="card-title">scrap-net</h5>
-                            <p class="card-text">A nod to both web scraping and the internet.</p>
-                            <a href="https://scrap-net.glitch.me/" target="_blank" class="btn btn-primary">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="col-md-3 mb-4">
-                    <div class="card project-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Scrapify</h5>
-                            <p class="card-text">Enter the URL of the page and specify the HTML element you want to scrape</p>
-                            <a href="https://scrapify.glitch.me/" target="_blank" class="btn btn-primary">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 4 -->
-                <div class="col-md-3 mb-4">
-                    <div class="card project-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Scrapify</h5>
-                            <p class="card-text">Enter the URL of the page and specify the HTML element you want to scrape</p>
-                            <a href="https://scrapify.glitch.me/" target="_blank" class="btn btn-primary">View Project</a>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="text-center mb-4">My Projects</h2>
+        <div class="row">
+          <!-- Project 1 -->
+          <div class="col-md-3 mb-4">
+            <div class="card project-card">
+              <div class="card-body">
+                <h5 class="card-title">Task Trail</h5>
+                <p class="card-text">
+                  Your go-to for managing and conquering daily tasks
+                  effortlessly.
+                </p>
+                <a
+                  href="https://task-trail.glitch.me/"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >View Project</a
+                >
+              </div>
             </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="col-md-3 mb-4">
+            <div class="card project-card">
+              <div class="card-body">
+                <h5 class="card-title">scrap-net</h5>
+                <p class="card-text">
+                  A nod to both web scraping and the internet.
+                </p>
+                <a
+                  href="https://scrap-net.glitch.me/"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="col-md-3 mb-4">
+            <div class="card project-card">
+              <div class="card-body">
+                <h5 class="card-title">Scrapify</h5>
+                <p class="card-text">
+                  Enter the URL of the page and specify the HTML element you
+                  want to scrape
+                </p>
+                <a
+                  href="https://scrapify.glitch.me/"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="col-md-3 mb-4">
+            <div class="card project-card">
+              <div class="card-body">
+                <h5 class="card-title">Scrapify</h5>
+                <p class="card-text">
+                  Enter the URL of the page and specify the HTML element you
+                  want to scrape
+                </p>
+                <a
+                  href="https://scrapify.glitch.me/"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="projects-section">
+      <div class="container">
+        <h2 class="text-center mb-4">My Projects</h2>
+        <div class="row">
+          <!-- Project Card 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card project-card border-0 shadow-sm">
+              <div
+                class="card-header bg-primary text-white text-center p-4 rounded-top"
+              >
+                <i class="bi bi-code-slash" style="font-size: 2rem"></i>
+                <h5 class="mt-3">Task Trail</h5>
+              </div>
+              <div class="card-body text-center">
+                <p class="card-text text-muted">
+                  Your go-to for managing and conquering daily tasks
+                  effortlessly.
+                </p>
+                <a
+                  href="https://task-trail.glitch.me/"
+                  target="_blank"
+                  class="btn btn-outline-primary btn-sm"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card project-card border-0 shadow-sm">
+              <div
+                class="card-header bg-success text-white text-center p-4 rounded-top"
+              >
+                <i class="bi bi-palette" style="font-size: 2rem"></i>
+                <h5 class="mt-3">Project 2</h5>
+              </div>
+              <div class="card-body text-center">
+                <p class="card-text text-muted">
+                  A brief description of Project 2 goes here, highlighting its
+                  features or functionality.
+                </p>
+                <a
+                  href="https://example.com/project2"
+                  target="_blank"
+                  class="btn btn-outline-success btn-sm"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card project-card border-0 shadow-sm">
+              <div
+                class="card-header bg-warning text-white text-center p-4 rounded-top"
+              >
+                <i class="bi bi-lightbulb" style="font-size: 2rem"></i>
+                <h5 class="mt-3">Project 3</h5>
+              </div>
+              <div class="card-body text-center">
+                <p class="card-text text-muted">
+                  A brief description of Project 3 goes here, highlighting its
+                  features or functionality.
+                </p>
+                <a
+                  href="https://example.com/project3"
+                  target="_blank"
+                  class="btn btn-outline-warning btn-sm"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer mt-auto">
-        <p>&copy; 2024 JMS-Team. All rights reserved. <a href="#profile-header">Back to top</a></p>
+      <p>
+        &copy; 2024 JMS-Team. All rights reserved.
+        <a href="#profile-header">Back to top</a>
+      </p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+  </body>
 </html>
