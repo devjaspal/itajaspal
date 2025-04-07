@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS-Team</title>
+    <title>Jaspal Singh</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,70 +14,89 @@
     />
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: 'Segoe UI', sans-serif;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        background-color: #f1f3f5;
       }
 
       .profile-header {
-        background: linear-gradient(to right, #007bff, #6c757d);
+        background: linear-gradient(135deg, #0d6efd, #495057);
         color: white;
-        padding: 80px 20px 50px; /* Added more top padding for better spacing */
+        padding: 100px 20px 60px;
         text-align: center;
+        position: relative;
       }
 
       .profile-header img {
-        background: white;
-        width: 180px;
-        height: 180px;
-        object-fit: contain ;
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
         border-radius: 50%;
-        margin-top: -80px;
-        border: 5px solid white;
-        padding: 5px;
-        clip-path: circle(40%);
-    
-
-
-
+        border: 6px solid white;
+        position: absolute;
+        left: 50%;
+        top: 30px;
+        transform: translateX(-50%);
+        background-color: white;
       }
 
       .profile-header h1 {
-        margin-top: 10px;
-        font-size: 2.5rem;
+        margin-top: 140px;
+        font-size: 2.75rem;
+        font-weight: 600;
       }
 
       .profile-header p {
         font-size: 1.2rem;
+        margin-bottom: 10px;
       }
 
       .projects-section {
-        background-color: #f8f9fa;
-        padding: 40px 20px;
-        flex: 1; /* Ensures this section grows to take available space */
+        padding: 60px 20px;
+        flex: 1;
+      }
+
+      .projects-section h2 {
+        font-weight: 700;
+        margin-bottom: 40px;
       }
 
       .project-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
       }
 
       .project-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-header {
+        font-weight: 600;
+      }
+
+      .btn-custom {
+        border-radius: 30px;
+        padding: 6px 20px;
+        font-weight: 500;
       }
 
       .footer {
-        background-color: #343a40;
+        background-color: #212529;
         color: white;
         text-align: center;
         padding: 20px 0;
-        position: relative;
       }
 
       .footer a {
-        color: #007bff;
+        color: #0d6efd;
         text-decoration: none;
+        margin-left: 8px;
       }
 
       .footer a:hover {
@@ -94,135 +113,104 @@
         alt="Profile Picture"
       />
       <h1>Jaspal Singh</h1>
-      <p>ITA(Software) | Bureau of investigation | Punjab Police</p>
-      <div class="mt-3 d-none">
-        <a href="mailto:john.doe@example.com" class="btn btn-light btn-sm mx-1"
-          ><i class="bi bi-envelope"></i> Email</a
-        >
-        <a
-          href="https://linkedin.com/in/johndoe"
-          target="_blank"
-          class="btn btn-light btn-sm mx-1"
-          ><i class="bi bi-linkedin"></i> LinkedIn</a
-        >
-        <a
-          href="https://github.com/johndoe"
-          target="_blank"
-          class="btn btn-light btn-sm mx-1"
-          ><i class="bi bi-github"></i> GitHub</a
-        >
-      </div>
+      <p>ITA(Software) | Bureau of Investigation | Punjab Police</p>
     </header>
+
+    <!-- Projects Section -->
     <section class="projects-section">
       <div class="container">
-        <h2 class="text-center mb-4">My Projects</h2>
-        <div class="row">
-          <!-- Project Card 1 -->
-          <div class="col-md-4 mb-4">
-            <div class="card project-card border-0 shadow-sm">
-              <div
-                class="card-header bg-primary text-white text-center p-4 rounded-top"
-              >
+        <h2 class="text-center">My Projects</h2>
+        <div class="row g-4">
+          <!-- Project Card Template -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card">
+              <div class="card-header bg-primary text-white text-center">
                 <i class="bi bi-code-slash" style="font-size: 2rem"></i>
-                <h5 class="mt-3">Task Trail</h5>
+                <h5 class="mt-2">Task Trail</h5>
               </div>
               <div class="card-body text-center">
-                <p class="card-text text-muted">
-                  Your go-to for managing and conquering daily tasks
-                  effortlessly.
+                <p class="text-muted">
+                  Your go-to for managing and conquering daily tasks effortlessly.
                 </p>
                 <a
                   href="https://task-trail.glitch.me/"
                   target="_blank"
-                  class="btn btn-outline-primary btn-sm"
+                  class="btn btn-outline-primary btn-sm btn-custom"
                   >View Project</a
                 >
               </div>
             </div>
           </div>
-          <!-- Project Card 2 -->
-          <div class="col-md-4 mb-4">
-            <div class="card project-card border-0 shadow-sm">
-              <div
-                class="card-header bg-success text-white text-center p-4 rounded-top"
-              >
+
+          <!-- Repeat for each project -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card">
+              <div class="card-header bg-success text-white text-center">
                 <i class="bi bi-palette" style="font-size: 2rem"></i>
-                <h5 class="mt-3">Scrapify</h5>
+                <h5 class="mt-2">Scrapify</h5>
               </div>
               <div class="card-body text-center">
-                <p class="card-text text-muted">
-                  Enter the URL of the page and specify the HTML element you
-                  want to scrape
+                <p class="text-muted">
+                  Enter the URL of the page and specify the HTML element you want to scrape.
                 </p>
                 <a
                   href="https://scrapify.glitch.me/"
                   target="_blank"
-                  class="btn btn-outline-success btn-sm"
+                  class="btn btn-outline-success btn-sm btn-custom"
                   >View Project</a
                 >
               </div>
             </div>
           </div>
-          <!-- Project Card 3 -->
-          <div class="col-md-4 mb-4">
-            <div class="card project-card border-0 shadow-sm">
-              <div
-                class="card-header bg-warning text-white text-center p-4 rounded-top"
-              >
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card">
+              <div class="card-header bg-warning text-white text-center">
                 <i class="bi bi-lightbulb" style="font-size: 2rem"></i>
-                <h5 class="mt-3">scrap-net</h5>
+                <h5 class="mt-2">Scrap-Net</h5>
               </div>
               <div class="card-body text-center">
-                <p class="card-text text-muted">
+                <p class="text-muted">
                   A nod to both web scraping and the internet.
                 </p>
                 <a
                   href="https://scrap-net.glitch.me/"
                   target="_blank"
-                  class="btn btn-outline-warning btn-sm"
+                  class="btn btn-outline-warning btn-sm btn-custom"
                   >View Project</a
                 >
               </div>
             </div>
           </div>
-        </div>
-        
-        <div class="row">
-          <!-- Project Card 1 -->
-          <div class="col-md-4 mb-4">
-            <div class="card project-card border-0 shadow-sm">
-              <div
-                class="card-header bg-primary text-white text-center p-4 rounded-top"
-              >
-                <i class="bi bi-code-slash" style="font-size: 2rem"></i>
-                <h5 class="mt-3">AR-VR</h5>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card">
+              <div class="card-header bg-info text-white text-center">
+                <i class="bi bi-vr" style="font-size: 2rem"></i>
+                <h5 class="mt-2">AR-VR</h5>
               </div>
               <div class="card-body text-center">
-                <p class="card-text text-muted">
-                  Here's a sample project for Augmented Reality (AR), designed as a starting point for learning and experimentation.
+                <p class="text-muted">
+                  A sample project for AR — perfect for learning and experimentation.
                 </p>
                 <a
                   href="https://js-ar-vr.glitch.me/"
                   target="_blank"
-                  class="btn btn-outline-primary btn-sm"
+                  class="btn btn-outline-info btn-sm btn-custom"
                   >View Project</a
                 >
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </section>
 
-    
-    
-    
     <!-- Footer -->
-    <footer class="footer mt-auto">
+    <footer class="footer">
       <p>
         &copy; 2025 itajaspal. All rights reserved.
-        <a href="#profile-header">Back to top</a>
+        <a href="#">Back to top</a>
       </p>
     </footer>
 
